@@ -1,0 +1,20 @@
+To create own docker image and run a container which displays time
+
+Command-->
+
+##Created docker file
+vim Dockefile
+FROM alpine
+
+##Created image
+docker build -t alpine:sonu .
+
+##Created conatiner and run command
+docker run --name sonuc1q1 alpine:sonu date -u +"%H:%M:%S"
+
+###Output
+O1-->18:10:44
+O2-->18:12:10
+
+##save output of container to a text file
+docker logs -f sonuc1q1 > question1.txt
