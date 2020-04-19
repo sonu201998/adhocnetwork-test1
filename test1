@@ -18,3 +18,19 @@ O2-->18:12:10
 
 ##save output of container to a text file
 docker logs -f sonuc1q1 > question1.txt
+
+QUESTION2--->Build an image and retag it to push it to docker hub--->
+
+##Solution-->
+
+##used git link to clone a directory as webcode-->
+mkdir webcode
+cd webcode
+
+##edit dockerfile and build image--->
+vim Dockerfile
+docker build -t adhoc:sonu .
+
+## tag image and push to docker hub--->
+docker tag adhoc:sonu son9798/adhoc:sonu
+docker push son9798/adhoc:sonu
